@@ -9,7 +9,7 @@ export const site = {
   intro: {
     paragraphs: [
       "Hi, I'm EZ, a Product Manager from Taiwan, now pursuing my MBA at UC Berkeley Haas (Class of 2027). I spent five years building digital banking and fintech products in Taiwan, most recently leading credit and mortgage portfolios at KGI Bank, and before that launching a crypto payment gateway at Nogle. I'm into the messy intersection of data, growth, and user behavior.",
-      "Outside of work, I play baseball and basketball, grind Texas Hold'em, and binge dramas and novels. My favorite artist is LANY.",
+      "Outside of work, I play baseball and basketball, grind Texas Hold'em, and binge dramas and novels. My favorite artist is LANY. Oh and I love boba tea. 🧋",
     ],
   },
   links: {
