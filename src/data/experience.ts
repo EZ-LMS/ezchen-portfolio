@@ -27,7 +27,7 @@ export const experience: ExperienceEntry[] = [
     end: "2022",
     logo: "/images/logos/kgi.png",
     blurb:
-      "Rotation across different departments in the Retail Banking Group. Sourced and closed a B2B partnership embedding banking APIs into dental-clinic workflows, acquiring physician clients averaging $200K in deposits and 30% cross-sell to wealth products.",
+      "Rotation across different departments in the Retail Banking Group. Sourced a B2B partnership embedding banking APIs into dental-clinic workflows.",
   },
   {
     company: "Nogle Limited",
