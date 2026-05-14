@@ -4,9 +4,8 @@ description: "MLB player intelligence platform surfacing the gap between surface
 year: 2025
 tech: ["Python", "Streamlit", "pandas", "pybaseball"]
 demoUrl: "https://scoutiq-0919.streamlit.app/League_Intelligence"
-demoNote: "Streamlit app — set to public to view"
 repoUrl: "https://github.com/EZ-LMS/ScoutIQ"
-thumbnail: "/images/projects/scoutiq.svg"
+thumbnail: "/images/projects/scoutiq.png"
 featured: true
 order: 1
 ---
