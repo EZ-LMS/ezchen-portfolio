@@ -11,12 +11,12 @@ export interface ExperienceEntry {
 export const experience: ExperienceEntry[] = [
   {
     company: "KGI Bank",
-    location: "Taipei, Taiwan",
+    location: "Taipei",
     role: "Product Manager",
-    start: "Jul 2022",
-    end: "Jun 2025",
+    start: "2022",
+    end: "2025",
     blurb:
-      "Led growth, GTM, and platform initiatives across credit and mortgage portfolios at a commercial bank with 51 branches and 2,200+ employees.",
+      "Led digital transformation across credit and mortgage portfolios — covering digital marketing, online application platforms, and workflow optimization at a commercial bank with 51 branches and 2,200+ employees.",
     bullets: [
       "Launched online mortgage platform with end-to-end automation, cutting application processing time by 60% and driving 50% digital channel adoption.",
       "Built AI/ML cross-sell model with data scientists, lifting cross-sell penetration from 17% to 24%.",
@@ -25,24 +25,28 @@ export const experience: ExperienceEntry[] = [
   },
   {
     company: "KGI Bank",
-    location: "Taipei, Taiwan",
+    location: "Taipei",
     role: "Management Associate",
-    start: "Jul 2021",
-    end: "Jun 2022",
+    start: "2021",
+    end: "2022",
     blurb:
-      "Rotation program across credit, ops, and digital lending — owned UAT for a core credit system and ran cross-functional process redesigns.",
+      "Rotation across credit, ops, and digital lending. Owned UAT for a core credit system and ran cross-functional process redesigns.",
+    bullets: [
+      "Sourced and closed a B2B partnership with a health software provider, embedding banking APIs into dental clinic workflows to acquire physician clients averaging $200K in deposits and 30% cross-sell to wealth products.",
+    ],
   },
   {
     company: "Nogle Limited",
-    location: "Taipei, Taiwan",
+    location: "Taipei",
     role: "Associate Product Manager",
-    start: "Jun 2020",
-    end: "Jul 2021",
+    start: "2020",
+    end: "2021",
     blurb:
       "Crypto exchange and payment gateway fintech. Led product development of a crypto payment gateway and streamlined OTC operations.",
     bullets: [
       "Shipped multi-currency crypto payment gateway processing 1M daily transactions; broke even in 1.5 years.",
       "Cut implementation time 50% and support response time to 3 minutes via API and workflow redesign.",
+      "Streamlined OTC trading for 5M daily trades via SOP design and IT dual-verification, guaranteeing 10-minute deal execution and eliminating financial loss from human error.",
     ],
   },
 ];

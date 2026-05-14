@@ -5,18 +5,11 @@ import ProjectCard from "./ProjectCard.astro";
 const all = await getCollection("projects", ({ data }) => data.featured);
 const projects = all.sort((a, b) => a.data.order - b.data.order);
 ---
-<section id="work" class="section border-t border-line">
+<section id="work" class="py-12 md:py-16 border-t border-line">
   <div class="page-container">
-    <p class="eyebrow mb-4">Selected work</p>
-    <h2 class="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
-      Things I've been building.
-    </h2>
-    <p class="text-base text-ink-muted max-w-2xl mb-10">
-      Side projects I ship in spare hours, mostly built with AI coding tools.
-      Each is small enough to be useful end-to-end.
-    </p>
+    <p class="eyebrow mb-6">Selected work</p>
 
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {projects.map((p) => (
         <ProjectCard
           title={p.data.title}

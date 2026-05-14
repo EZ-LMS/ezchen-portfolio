@@ -1,0 +1,41 @@
+---
+import { site } from "../data/site";
+---
+<section id="about" class="pt-16 md:pt-24 pb-12 md:pb-16">
+  <div class="page-container grid gap-8 md:gap-10 md:grid-cols-[260px_1fr] items-start">
+    {/* Identity sidebar */}
+    <aside class="md:sticky md:top-20">
+      <div class="rounded-2xl border border-line bg-surface p-5">
+        <div class="overflow-hidden rounded-xl aspect-square bg-surface-2 mb-4 border border-line">
+          <img
+            src="/images/hero.svg"
+            alt="Portrait of EZ Chen"
+            class="h-full w-full object-cover"
+          />
+        </div>
+        <h1 class="text-2xl font-semibold tracking-tight leading-tight">
+          EZ Chen
+        </h1>
+        <p class="mt-2 text-sm text-ink-muted">
+          {site.tagline}
+        </p>
+        <p class="mt-1 text-xs text-ink-faint font-mono">
+          Based in {site.location}
+        </p>
+      </div>
+    </aside>
+
+    {/* Intro content */}
+    <div class="md:pt-2">
+      <p class="eyebrow mb-4">About</p>
+
+      <h2 class="text-2xl md:text-3xl font-semibold tracking-tight leading-tight text-ink max-w-2xl">
+        {site.headline}
+      </h2>
+
+      <div class="mt-6 space-y-4 text-base leading-relaxed text-ink-muted max-w-2xl">
+        {site.intro.paragraphs.map((p) => <p>{p}</p>)}
+      </div>
+    </div>
+  </div>
+</section>

@@ -19,9 +19,9 @@ export const site = {
   },
   nav: [
     { label: "About", href: "#about" },
-    { label: "Experience", href: "#experience" },
-    { label: "Education", href: "#education" },
+    { label: "History", href: "#history" },
     { label: "Work", href: "#work" },
     { label: "Contact", href: "#contact" },
   ],
+  headline: "Building products at the messy intersection of data, growth, and user behavior.",
 } as const;
