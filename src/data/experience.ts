@@ -6,6 +6,7 @@ export interface ExperienceEntry {
   end: string;
   blurb?: string;
   bullets?: string[];
+  logo?: string;
 }
 
 export const experience: ExperienceEntry[] = [
@@ -15,6 +16,7 @@ export const experience: ExperienceEntry[] = [
     role: "Product Manager",
     start: "2022",
     end: "2025",
+    logo: "/images/logos/kgi.svg",
     blurb:
       "Led digital transformation across credit and mortgage portfolios — covering digital marketing, online application platforms, and workflow optimization at a commercial bank with 51 branches and 2,200+ employees.",
     bullets: [
@@ -29,6 +31,7 @@ export const experience: ExperienceEntry[] = [
     role: "Management Associate",
     start: "2021",
     end: "2022",
+    logo: "/images/logos/kgi.svg",
     blurb:
       "Rotation across credit, ops, and digital lending. Owned UAT for a core credit system and ran cross-functional process redesigns.",
     bullets: [
@@ -41,6 +44,7 @@ export const experience: ExperienceEntry[] = [
     role: "Associate Product Manager",
     start: "2020",
     end: "2021",
+    logo: "/images/logos/nogle.svg",
     blurb:
       "Crypto exchange and payment gateway fintech. Led product development of a crypto payment gateway and streamlined OTC operations.",
     bullets: [

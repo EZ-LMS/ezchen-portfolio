@@ -20,13 +20,25 @@ import { education } from "../data/education";
                   {item.start}–{String(item.end).slice(-2)}
                 </span>
                 <div class="min-w-0">
-                  <div class="flex flex-wrap items-baseline gap-x-2">
-                    <h3 class="text-base font-medium text-ink">{item.role}</h3>
-                    <span class="text-ink-faint text-sm">·</span>
-                    <p class="text-sm text-ink-muted">{item.company}</p>
+                  <div class="flex items-center gap-2.5">
+                    {item.logo && (
+                      <span class="shrink-0 inline-flex items-center justify-center h-7 w-7 rounded-md overflow-hidden border border-line bg-surface">
+                        <img
+                          src={item.logo}
+                          alt={`${item.company} logo`}
+                          class="h-full w-full object-contain"
+                          loading="lazy"
+                        />
+                      </span>
+                    )}
+                    <div class="flex flex-wrap items-baseline gap-x-2 min-w-0">
+                      <h3 class="text-base font-medium text-ink">{item.role}</h3>
+                      <span class="text-ink-faint text-sm">·</span>
+                      <p class="text-sm text-ink-muted">{item.company}</p>
+                    </div>
                   </div>
                   {item.blurb && (
-                    <p class="mt-1.5 text-sm leading-relaxed text-ink-muted">
+                    <p class="mt-2 text-sm leading-relaxed text-ink-muted">
                       {item.blurb}
                     </p>
                   )}
@@ -60,8 +72,20 @@ import { education } from "../data/education";
                   {item.start}–{String(item.end).slice(-2)}
                 </span>
                 <div class="min-w-0">
-                  <h3 class="text-base font-medium text-ink leading-snug">{item.school}</h3>
-                  <p class="mt-1 text-sm text-ink-muted">
+                  <div class="flex items-center gap-2.5">
+                    {item.logo && (
+                      <span class="shrink-0 inline-flex items-center justify-center h-7 w-7 rounded-md overflow-hidden border border-line bg-surface">
+                        <img
+                          src={item.logo}
+                          alt={`${item.shortName} logo`}
+                          class="h-full w-full object-contain"
+                          loading="lazy"
+                        />
+                      </span>
+                    )}
+                    <h3 class="text-base font-medium text-ink leading-snug">{item.school}</h3>
+                  </div>
+                  <p class="mt-2 text-sm text-ink-muted">
                     {item.degree}
                   </p>
                   {item.note && (
