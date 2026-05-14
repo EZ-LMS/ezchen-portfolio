@@ -17,7 +17,7 @@ export const education: EducationEntry[] = [
     degree: "Master of Business Administration",
     start: "2025",
     end: "2027",
-    logo: "/images/logos/ucb.svg",
+    logo: "/images/logos/ucb.png",
     note: "Berkeley Haas Merit Scholarship · Tech Club · Fintech Club · Product Management Club",
   },
   {
@@ -27,7 +27,7 @@ export const education: EducationEntry[] = [
     degree: "Bachelor of Arts, Economics",
     start: "2015",
     end: "2019",
-    logo: "/images/logos/ntu.svg",
+    logo: "/images/logos/ntu.jpg",
     note: "Co-Captain, Varsity Baseball Team",
   },
 ];

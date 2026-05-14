@@ -34,7 +34,21 @@ import { site } from "../data/site";
       </h2>
 
       <div class="mt-6 space-y-4 text-base leading-relaxed text-ink-muted max-w-2xl">
-        {site.intro.paragraphs.map((p) => <p>{p}</p>)}
+        <p>{site.intro.paragraphs[0]}</p>
+
+        <div class="grid gap-5 sm:grid-cols-[1fr_220px] items-center pt-2">
+          <p class="order-2 sm:order-1">{site.intro.paragraphs[1]}</p>
+          <figure class="order-1 sm:order-2">
+            <div class="overflow-hidden rounded-xl border border-line bg-surface-2 aspect-[4/3]">
+              <img
+                src="/images/about-baseball.jpg"
+                alt="EZ at bat for National Taiwan University, jersey #34"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </figure>
+        </div>
       </div>
     </div>
   </div>
