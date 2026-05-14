@@ -42,16 +42,6 @@ import { education } from "../data/education";
                       {item.blurb}
                     </p>
                   )}
-                  {item.bullets && item.bullets.length > 0 && (
-                    <ul class="mt-2 space-y-1.5">
-                      {item.bullets.map((b) => (
-                        <li class="flex gap-2 text-sm text-ink-muted leading-relaxed">
-                          <span class="text-ink-faint shrink-0" aria-hidden="true">—</span>
-                          <span>{b}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
                 </div>
               </div>
             </li>
