@@ -1,0 +1,50 @@
+---
+import "../styles/global.css";
+import { site } from "../data/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title, description = site.description } = Astro.props;
+const pageTitle = title ? `${title} — ${site.name}` : `${site.name} — ${site.tagline}`;
+const ogImage = new URL("/images/og.jpg", site.url).toString();
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+
+    {/* Open Graph */}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={site.url} />
+    <meta property="og:image" content={ogImage} />
+
+    {/* Twitter */}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    {/* Theme color */}
+    <meta name="theme-color" content="#FAFAF7" />
+  </head>
+  <body class="min-h-screen bg-bg text-ink antialiased">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-surface focus:text-ink focus:px-4 focus:py-2 focus:rounded-md focus:shadow"
+    >
+      Skip to content
+    </a>
+    <slot />
+  </body>
+</html>

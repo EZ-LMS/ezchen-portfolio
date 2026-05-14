@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@import "@fontsource/geist-sans/400.css";
+@import "@fontsource/geist-sans/500.css";
+@import "@fontsource/geist-sans/600.css";
+@import "@fontsource/geist-sans/700.css";
+@import "@fontsource/geist-mono/400.css";
+@import "@fontsource/geist-mono/500.css";
+
+@theme {
+  /* Surfaces */
+  --color-bg: #FAFAF7;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #F4F2EE;
+
+  /* Text */
+  --color-ink: #1F1F23;
+  --color-ink-muted: #6B6B73;
+  --color-ink-faint: #9A9AA3;
+
+  /* Morandi accents */
+  --color-dust-purple: #B8A9C9;
+  --color-dust-pink: #D4B5C4;
+  --color-dust-blue: #A9B8C9;
+  --color-dust-sky: #B5C4D4;
+
+  /* Borders */
+  --color-line: #E8E6E1;
+  --color-line-strong: #D4D2CC;
+
+  /* Typography */
+  --font-sans: "Geist Sans", ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Layout */
+  --container-page: 64rem;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+::selection {
+  background: var(--color-dust-purple);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-dust-purple);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.page-container {
+  width: 100%;
+  max-width: var(--container-page);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .page-container {
+    padding-inline: 2rem;
+  }
+}
+
+.section {
+  padding-block: 4rem;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding-block: 6rem;
+  }
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+}
