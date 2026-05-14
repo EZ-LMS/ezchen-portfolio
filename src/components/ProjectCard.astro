@@ -6,12 +6,12 @@ interface Props {
   tech: string[];
   demoUrl?: string;
   demoNote?: string;
-  repoUrl: string;
+  repoUrl?: string;
   thumbnail: string;
 }
 
 const { title, description, year, tech, demoUrl, demoNote, repoUrl, thumbnail } = Astro.props;
-const primaryHref = demoUrl ?? repoUrl;
+const primaryHref = demoUrl ?? repoUrl ?? "#";
 ---
 <article class="group relative flex flex-col overflow-hidden rounded-xl border border-line bg-surface transition-all hover:border-line-strong hover:-translate-y-0.5 hover:shadow-[0_10px_30px_-15px_rgba(31,31,35,0.15)]">
   <a
@@ -60,14 +60,16 @@ const primaryHref = demoUrl ?? repoUrl;
           Demo<span aria-hidden="true" class="text-ink-faint">↗</span>
         </a>
       )}
-      <a
-        href={repoUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        class="inline-flex items-center gap-1 text-ink-muted hover:text-ink"
-      >
-        Code<span aria-hidden="true" class="text-ink-faint">↗</span>
-      </a>
+      {repoUrl && (
+        <a
+          href={repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1 text-ink-muted hover:text-ink"
+        >
+          Code<span aria-hidden="true" class="text-ink-faint">↗</span>
+        </a>
+      )}
       {demoNote && (
         <span class="text-[10px] text-ink-faint ml-auto italic">{demoNote}</span>
       )}

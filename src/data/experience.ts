@@ -17,7 +17,7 @@ export const experience: ExperienceEntry[] = [
     end: "2025",
     logo: "/images/logos/kgi.png",
     blurb:
-      "Led digital transformation across credit and mortgage portfolios — digital marketing, online application platforms, and end-to-end workflow optimization.",
+      "Led digital transformation across credit and mortgage portfolios — digital marketing, online application platforms, end-to-end workflow optimization, portfolio strategy, and lending portfolio strategy.",
   },
   {
     company: "KGI Bank",
@@ -27,7 +27,7 @@ export const experience: ExperienceEntry[] = [
     end: "2022",
     logo: "/images/logos/kgi.png",
     blurb:
-      "Rotation across credit, ops, and digital lending. Sourced a B2B partnership embedding banking APIs into dental-clinic workflows.",
+      "Rotation across different departments in the Retail Banking Group.",
   },
   {
     company: "Nogle Limited",

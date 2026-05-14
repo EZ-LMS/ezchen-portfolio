@@ -6,13 +6,36 @@ import { site } from "../data/site";
     {/* Identity sidebar */}
     <aside class="md:sticky md:top-20">
       <div class="rounded-2xl border border-line bg-surface p-5">
-        <div class="overflow-hidden rounded-xl aspect-square bg-surface-2 mb-4 border border-line">
-          <img
-            src="/images/hero.jpg"
-            alt="Portrait of EZ Chen"
-            class="h-full w-full object-cover"
-          />
+        {/* Flip card: hero (now) ↔ baseball portrait (then) */}
+        <div
+          class="flip-card mb-4 aspect-square cursor-pointer select-none"
+          tabindex="0"
+          role="button"
+          aria-label="Toggle photo: present and college days"
+        >
+          <div class="flip-card-inner relative h-full w-full">
+            <div class="flip-card-face flip-card-front overflow-hidden rounded-xl border border-line bg-surface-2">
+              <img
+                src="/images/hero.jpg"
+                alt="Portrait of EZ Chen"
+                class="h-full w-full object-cover"
+              />
+            </div>
+            <div class="flip-card-face flip-card-back overflow-hidden rounded-xl border border-line bg-surface-2">
+              <img
+                src="/images/about-baseball-portrait.jpg"
+                alt="EZ at bat for National Taiwan University, jersey #34"
+                class="h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <p class="mt-2 text-[10px] font-mono uppercase tracking-[0.18em] text-ink-faint text-center">
+            <span class="flip-card-label-front">Hover · then</span>
+            <span class="flip-card-label-back">College days · NTU #34</span>
+          </p>
         </div>
+
         <h1 class="text-2xl font-semibold tracking-tight leading-tight">
           EZ Chen
         </h1>
@@ -34,22 +57,59 @@ import { site } from "../data/site";
       </h2>
 
       <div class="mt-6 space-y-4 text-base leading-relaxed text-ink-muted max-w-2xl">
-        <p>{site.intro.paragraphs[0]}</p>
-
-        <div class="grid gap-5 sm:grid-cols-[1fr_220px] items-center pt-2">
-          <p class="order-2 sm:order-1">{site.intro.paragraphs[1]}</p>
-          <figure class="order-1 sm:order-2">
-            <div class="overflow-hidden rounded-xl border border-line bg-surface-2 aspect-[4/3]">
-              <img
-                src="/images/about-baseball.jpg"
-                alt="EZ at bat for National Taiwan University, jersey #34"
-                class="h-full w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          </figure>
-        </div>
+        {site.intro.paragraphs.map((p) => <p>{p}</p>)}
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .flip-card {
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    transform-style: preserve-3d;
+  }
+  .flip-card-face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+  .flip-card:hover .flip-card-inner,
+  .flip-card:focus .flip-card-inner,
+  .flip-card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-label-back {
+    display: none;
+  }
+  .flip-card:hover .flip-card-label-front,
+  .flip-card:focus .flip-card-label-front,
+  .flip-card.is-flipped .flip-card-label-front {
+    display: none;
+  }
+  .flip-card:hover .flip-card-label-back,
+  .flip-card:focus .flip-card-label-back,
+  .flip-card.is-flipped .flip-card-label-back {
+    display: inline;
+  }
+</style>
+
+<script is:inline>
+  // Click toggles persistent flip (helps mobile / touch where there is no hover)
+  document.querySelectorAll('.flip-card').forEach((el) => {
+    el.addEventListener('click', () => el.classList.toggle('is-flipped'));
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        el.classList.toggle('is-flipped');
+      }
+    });
+  });
+</script>

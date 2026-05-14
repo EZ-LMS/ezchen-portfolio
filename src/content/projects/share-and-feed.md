@@ -4,7 +4,6 @@ description: "A music-pet companion: stream listening history feeds a living ele
 year: 2025
 tech: ["Concept", "TypeScript", "Vite", "Vercel"]
 demoUrl: "https://share-and-feed.vercel.app/"
-repoUrl: "https://github.com/EZ-LMS/share-and-feed"
 thumbnail: "/images/projects/share-and-feed.png"
 featured: true
 order: 5
