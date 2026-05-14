@@ -30,10 +30,6 @@ import { site } from "../data/site";
               />
             </div>
           </div>
-          <p class="mt-2 text-[10px] font-mono uppercase tracking-[0.18em] text-ink-faint text-center">
-            <span class="flip-card-label-front">Hover · then</span>
-            <span class="flip-card-label-back">College days · NTU #34</span>
-          </p>
         </div>
 
         <h1 class="text-2xl font-semibold tracking-tight leading-tight">
@@ -86,19 +82,6 @@ import { site } from "../data/site";
     transform: rotateY(180deg);
   }
 
-  .flip-card-label-back {
-    display: none;
-  }
-  .flip-card:hover .flip-card-label-front,
-  .flip-card:focus .flip-card-label-front,
-  .flip-card.is-flipped .flip-card-label-front {
-    display: none;
-  }
-  .flip-card:hover .flip-card-label-back,
-  .flip-card:focus .flip-card-label-back,
-  .flip-card.is-flipped .flip-card-label-back {
-    display: inline;
-  }
 </style>
 
 <script is:inline>
