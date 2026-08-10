@@ -10,6 +10,16 @@ export interface ExperienceEntry {
 
 export const experience: ExperienceEntry[] = [
   {
+    company: "Gen Digital",
+    location: "United States",
+    role: "Sales Operations & Enablement Intern",
+    start: "2026",
+    end: "2026",
+    logo: "/images/logos/gen.png",
+    blurb:
+      "Validated the data integrity behind a new Salesforce scoring system and designed an AI readiness framework to help Sales leadership prioritize deals for Legal and Finance review.",
+  },
+  {
     company: "KGI Bank",
     location: "Taipei",
     role: "Product Manager",

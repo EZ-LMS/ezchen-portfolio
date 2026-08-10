@@ -15,9 +15,9 @@ import { education } from "../data/education";
         <ol class="space-y-7">
           {experience.map((item) => (
             <li>
-              <div class="grid grid-cols-[auto_1fr] gap-4">
+              <div class="grid grid-cols-[3.5rem_1fr] gap-4">
                 <span class="font-mono text-xs text-ink-faint pt-0.5 whitespace-nowrap">
-                  {item.start}–{String(item.end).slice(-2)}
+                  {item.start === item.end ? item.start : `${item.start}–${String(item.end).slice(-2)}`}
                 </span>
                 <div class="min-w-0">
                   <div class="flex items-center gap-2.5">
@@ -57,9 +57,9 @@ import { education } from "../data/education";
         <ol class="space-y-7">
           {education.map((item) => (
             <li>
-              <div class="grid grid-cols-[auto_1fr] gap-4">
+              <div class="grid grid-cols-[3.5rem_1fr] gap-4">
                 <span class="font-mono text-xs text-ink-faint pt-0.5 whitespace-nowrap">
-                  {item.start}–{String(item.end).slice(-2)}
+                  {item.start === item.end ? item.start : `${item.start}–${String(item.end).slice(-2)}`}
                 </span>
                 <div class="min-w-0">
                   <div class="flex items-center gap-2.5">
